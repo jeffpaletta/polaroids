@@ -1,0 +1,1 @@
+Will use this fallback swf if the browser does not support canvas .

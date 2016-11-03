@@ -1,0 +1,203 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>jQuery Polaroid Gallery  - html5 canvas + flash fallback</title>
+	
+	<meta name="description" content="jQuery HTML5 Polaroid Gallery is jQuery plugin ,if browser does not support HTML5 canvas tag ,will use flash version.  e.g. if you open with IE8 .
+">
+	<meta name="author" content="FlashTang">
+	<meta name="copyright" content="FlashTang">
+	<meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+	<meta name="date" content="2012-03-29T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	
+	
+	<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	<link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+	<script src="js/shCore.js"></script>
+	<script src="js/shBrushXml.js"></script>
+	<script src="js/shBrushJScript.js"></script>
+	<script>SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();</script>
+
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#0000FF;}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ol{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ol a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ol a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ol a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#how_to_use">HOW TO USE</a></li>
+			<li><a href="#credits">Credits</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright FlashTang 2012<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.6</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover"><h1>jQuery Polaroid Gallery </h1><h2>html5 canvas + flash fallback</h2><hr><ul><li>Created: 03/29/2011</li><li>latest Update: 03/29/2012</li><li>By: FlashTang</li><li><a href="http://codecanyon.net/user/FlashTang">codecanyon.net/user/FlashTang</a></li></ul><p>jQuery HTML5 Polaroid Gallery is jQuery plugin ,if browser does not support HTML5 canvas tag ,will use flash version.  e.g. if you open with IE8 .
+</p></section><section id="how_to_use">
+	<h3>HOW TO USE</h3><hr class="notop">
+<p>
+	1.Upload the PolaroidGallery to the same folder with your webpage (all necessary Javascript &nbsp; icon image&nbsp; css files are inside this folder).</p>
+<p>
+	2. Copy and paste below script to the head tag of your webpage :</p>
+<pre class="brush: js">
+&lt;script src=&quot;PolaroidGallery/jquery-1.7.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;PolaroidGallery/library.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;PolaroidGallery/jquery.FlashTang.PolaroidGallery.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;PolaroidGallery/style.css&quot; /&gt;
+&lt;script&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;$(document).ready(function(){
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;$(&quot;#demo-container&quot;).FTPolaroidGallery({
+                          size:&quot;900x558&quot;,
+                          backgroundImage:&quot;PolaroidGallery/bg.jpg&quot;,
+                          rimWidth:4,
+                          rim_radius:1,
+                          rimBottomHeight:20,
+                          cataThumbSize:&quot;160x130&quot;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;             cataThumbGrid:&quot;2x1&quot;,
+                          autoPlayDelay:6000,
+                          fps:30,
+                          BGM:&quot;PolaroidGallery/music/bgm&quot;,
+                          BGM_autoPlay:true,
+                          BGM_volume:0.2,
+                          fallBackData:&quot;PolaroidGallery/fallback/gallery.xml&quot;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;         });
+             })
+&lt;/script&gt;
+</pre>
+<p>
+	Parameters explain :</p>
+<p class="info">
+	&nbsp; size --------------------------&gt; The div stage size of your gallery<br>
+	&nbsp; backgroundImage --------&gt; Background image path<br>
+	&nbsp; rimWidth --------------------&gt; The frame width of the drag-able photos<br>
+	&nbsp; rim_radius ------------------&gt; The round radius photos (canvas only)<br>
+	&nbsp; rimBottomHeight ---------&gt;&nbsp; The height of the title area of the photos<br>
+	&nbsp; cataThumbSize -----------&gt; Catalogues thumb size<br>
+	&nbsp; cataThumbGrid------------&gt; Catalogue chooser ,how may thumbs show in a row ,e.g. &quot;2x1&quot;<br>
+	&nbsp; autoPlayDelay -------------&gt; The delay time of auto playing photos<br>
+	&nbsp; fps ----------------------------&gt; Frame per second (canvas only)<br>
+	&nbsp; BGM -------------------------&gt; Background music path (without expanded-name) .ogg .mp3<br>
+	&nbsp; BGM_autoPlay&nbsp; -----------&gt; Play background music at start. (on iOS always false)<br>
+	&nbsp; BGM_volume&nbsp; -------------&gt; The volume of background music<br>
+	&nbsp; fallBackData ---------------&gt; The xml file for flash fallback</p>
+<p class="warning">
+	You should also eidt xml file for flash fallback&nbsp; ,the demo xml is in floder : PolaroidGallery/fallback/gallery.xml</p>
+<p>
+	3. Create a div , (you can create this div inside a div which you want ) add galleries to it</p>
+<p>
+	&nbsp;&nbsp;&nbsp; the div id should be same with $(&quot;#***********&quot;).FTPolaroidGallery ...&nbsp;</p>
+<p>
+	&nbsp;&nbsp;&nbsp; you can give it an anther id , e.g.&nbsp; id=&quot;myPGallery&quot;&nbsp; ,&nbsp; then use $(&quot;#myPGallery&quot;).FTPolaroidGallery ...</p>
+<pre class="brush: html">
+&lt;div id=&quot;demo-container&quot;&gt;
+
+           &lt;!-- Gallery -1 --&gt;
+            &lt;div class=&quot;cata&quot; data-name=&quot;City Lamba - 1&quot; data-cataimage=&quot;imgs/cata_th/cata-1.jpg&quot;&gt;
+
+                &lt;div class=&quot;pg_photo&quot; data-image=&quot;imgs/1.jpg&quot; data-title=&quot;Image - 1&quot; &gt;
+                    &lt;div id=&quot;pg_des&quot; align=&quot;left&quot; style=&quot;display:none&quot;&gt;
+                         &lt;span&gt;
+                              &lt;h3&gt;Lorem 1ipsum dolor sit amet&lt;h3/&gt;
+                         &lt;/span&gt;
+                     &lt;/div&gt;
+                &lt;/div&gt;
+
+              &lt;div class=&quot;pg_photo&quot; data-image=&quot;imgs/2.jpg&quot; data-title=&quot;Image - 2&quot; &gt;
+                    &lt;div id=&quot;pg_des&quot; align=&quot;left&quot; style=&quot;display:none&quot;&gt;
+                         &lt;span&gt;
+                              &lt;h3&gt;Lorem 1ipsum dolor sit amet&lt;h3/&gt;
+                         &lt;/span&gt;
+                     &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;   
+
+            &lt;!--End of gallery -1 div--&gt;
+
+            &lt;!-- Gallery -2 --&gt;
+
+            &lt;!-- Add Second catalogue if you need--&gt;
+
+&lt;/div&gt;
+&lt;!-- End of demo-container div --&gt;
+</pre>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="credits">
+	<h3>Credits</h3><hr class="notop">
+<p>
+	Background Used in preview&nbsp; , if you like it you can buy ti from graphicriver :</p>
+<p>
+	<a href="http://graphicriver.net/item/wood-tileable-textures/144150">Wood &ndash; Tileable Textures</a> by v4</p>
+<p>
+	&nbsp;</p>
+<p>
+	Photos used in preview file by PD authors :</p>
+<p>
+	http://photodune.net.net/item/easter-eggs/1913491</p>
+<p>
+	http://photodune.net/item/bread-variety/778849</p>
+<p>
+	http://photodune.net/item/spa-setting-with-bath-salt/1034003</p>
+<p>
+	http://photodune.net/item/olive-oil/1455992</p>
+<p>
+	http://photodune.net/item/spa-setting/1531393</p>
+<p>
+	http://photodune.net/item/classic-lasagna/1644313</p>
+<p>
+	http://photodune.net/item/winter-hike/1485697</p>
+<p>
+	http://photodune.net/item/bmx-training/483839</p>
+<p>
+	http://photodune.net/item/kite-surfing/198026</p>
+<p>
+	http://photodune.net/item/rear-racing-bike-cassette-on-the-wheel-with-chain/904158</p>
+<p>
+	http://photodune.net/item/rear-racing-bike-cassette-on-the-wheel-with-chain/904158</p>
+<p>
+	http://photodune.net/item/ski/1766709</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+
+	</div>
+</body>
+</html>

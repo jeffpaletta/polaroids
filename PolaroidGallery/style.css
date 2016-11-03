@@ -1,0 +1,44 @@
+ 
+#demo-container{
+		 
+	/*margin:0 auto;  
+	border:dotted 1px #000000;*/
+
+}
+
+/*Do not delete this line*/
+#pg_des{position:absolute;}
+
+#pg_des h3{
+
+    padding: 0px;
+	margin: 0px;
+    font-size:16px;
+    color:#ccff00;
+     
+}
+
+#pg_des span{
+
+ 	font-family:  Arial, sans-serif;
+   	font-size:12px;
+	color:#ffffff;
+	font-weight: normal;
+    font-style: normal;
+ }
+
+#pg_des a{
+ 	
+ 	color:#FFCC00;
+
+}
+
+#pg_des b{
+ 	
+ 	color:#ffcc00;
+    font-size:16px;
+
+}
+ 
+
+ 

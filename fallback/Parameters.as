@@ -1,0 +1,1 @@
+﻿package  {		public class Parameters {		/*global parameters*/		public  static var cataThumbSize;				public  static var cataThumFrameRimX=60;		public  static var cataThumFrameRimY=60;				public static var cataThumbGrid="3x1" ;				public static var cataThumbWidth;		public static var cataThumbHeight;				public static var cata,memoryCata;	}	}
